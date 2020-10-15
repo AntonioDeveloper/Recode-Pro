@@ -2,7 +2,9 @@ const express = require("express");
 const server = express();
 const router = express.Router();
 const fs = require('fs');
-const cors = require('cors');
+const cors = require('cors'); /*Pacote para o Node.js que auxilia na 
+configuração das opções do CORS. Com ele, é possível atender às requisições
+de origem distinta. */
 
 server.use(cors());
 server.use(express.json({extended: true}));
