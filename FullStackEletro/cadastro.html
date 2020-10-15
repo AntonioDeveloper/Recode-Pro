@@ -33,7 +33,7 @@
     <!-- Formulário -->
 
     <div class="formulario">
-      <form id='frm1' >
+      <form id='frm1'>
         <label for='nome'>Nome:</label>
         <input type="text" style="width: 400px" id='nome' name='name'/> <br><br>
         <label for='phone'>Telefone:</label>
@@ -55,25 +55,25 @@
     </footer>
     <script>
       function getInputValue(){
-          // Selecting the input element and get its value 
-          var formVal = document.getElementById("frm1");
-          var nameVal = formVal.name.value;
-          var emailVal = formVal.email.value;
-          var phoneVal = formVal.phone.value;
+          /*Ao selecionar o elemento HTML do formulário, posso 
+          obter os valores dos inputs e armazená-los em um objeto. */
+
+          let formVal = document.getElementById("frm1");
+          let nameVal = formVal.name.value;
+          let emailVal = formVal.email.value;
+          let phoneVal = formVal.phone.value;
           
-          var obj = {
+          let obj = {
             name: nameVal,
             email: emailVal,
             phone: phoneVal
           }
-
-//var formData = JSON.stringify($("obj").serializeArray());
-var xhr = new XMLHttpRequest();
+/* Aqui, crio um objeto da classe XMLHttpRequest para solicitar que os dados
+sejam enviados ao endereço onde serão tratados, através do método POST.  */
+let xhr = new XMLHttpRequest();
         xhr.open('POST', 'http://localhost:3002', true);
-        xhr.setRequestHeader('Content-Type', 'application/json', 'charset=UTF-8');
-        
+        xhr.setRequestHeader('Content-Type', 'application/json', 'charset=UTF-8');        
         xhr.send(JSON.stringify(obj));
-
       }
 
   </script>
