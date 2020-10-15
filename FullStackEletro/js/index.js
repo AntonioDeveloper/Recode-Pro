@@ -2,7 +2,9 @@ const express = require("express");
 const server = express();
 const router = express.Router();
 const fs = require('fs');
+const cors = require('cors');
 
+server.use(cors());
 server.use(express.json({extended: true}));
 server.use(router);
 
@@ -16,7 +18,6 @@ const updateFile = JSON.stringify(content);
 fs.writeFileSync('./data/clientes.json', updateFile, 'utf-8');
 }
 
-
 router.get('/', (_, res) => {
   const content = readFile();
   res.send(content);
@@ -24,12 +25,14 @@ router.get('/', (_, res) => {
 
 router.post('/', (req, res) => {
 const {name, email, phone} = req.body;
+console.log(req.body);
   const currentContent = readFile();
 
   const id = Math.random().toString(32).substr(2, 9);
   currentContent.push({id, name, email, phone});
   writeFile(currentContent);
   res.send(currentContent);
+  
 });
 
 router.put('/:id', (req, res) => {
