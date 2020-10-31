@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+#formas_pagamento {
+  color: red;
+}
+
+.menu {
+  background-color: #ff0000;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  width: 15%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.categorias {
+  display: inline-block;
+  width: 30%;
+  cursor: pointer;
+}
+
+.produtos {
+  width: 70%;
+  float: right;
+}
+
+.box_produto {
+  display: inline-block;
+  width: 20%;
+  margin: 10px;
+}
+
+.endereco {
+  display: inline-block;
+  width: 20%;
+  text-align: justify;
+}
+
+.lojas:after {
+  content: '';
+  display: inline-block; /* Adicionando essa linha, */
+  width: 100%; /* essa também */
+  height: 0; /* e essa foi a última */
+}
+
+.email-whats {
+  margin: 20px 0;
+}
+
+.email-whats_blocos {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+
+.formulario {
+  display: block;
+  width: 50%;
+  text-align: justify;
+  position: relative;
+  margin: auto;
+}
+
+#enviar {
+  display: block;
+}
+
+.rodape {
+  text-align: center;
+  clear: both;
+}

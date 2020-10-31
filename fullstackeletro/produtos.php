@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos - Full Stack Eletro</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="./js/funcoes.js"></script>
+  </head>
+
+  <body>
+    <!-- Início do menu -->
+
+    <nav class="menu">
+      <a href="index.php">
+        <img src="./imagens/logo.jpg" alt="logo da loja" width="100px" />
+      </a>
+
+      <a href="produtos.php"> Produtos </a>
+
+      <a href="lojas.php"> Nossas Lojas </a>
+
+      <a href="contato.php"> Contato </a>
+
+      <a href="cadastro.php"> Cadastre-se </a>
+    </nav>
+
+    <!-- Fim do menu -->
+    <header>
+      <h1>Produtos</h1>
+    </header>
+    <hr />
+
+    <section class="categorias">
+      <h3>Categorias</h3>
+      <ul>
+        <li onclick="exibirTodos()">Todos</li>
+        <li onclick="exibirCategoria('geladeira')">Geladeiras (3)</li>
+        <li onclick="exibirCategoria('fogao')">Fogões (2)</li>
+        <li onclick="exibirCategoria('microondas')">Microondas (3)</li>
+        <li onclick="exibirCategoria('lavadoraDeRoupas')">Lavadora de Roupas (2)</li>
+        <li onclick="exibirCategoria('lavaLoucas')">Lava-louças (2)</li>
+      </ul>
+    </section>
+
+    <!-- Início da seção de produtos -->
+
+    <section class="produtos">
+      <div class="box_produto" id="geladeira">
+        <img src="./imagens/geladeira.jpg" alt="geladeira" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)" onmouseout="tirarDestaque(this)"/>
+        <br />
+        Geladeira Frost Free Brastemp Side Inverse 540 litros
+        <hr />
+        <strike>R$ 6.389,00</strike><br />
+        R$ 5.019,00<br />
+      </div>
+
+      <div class="box_produto" id="fogao">
+        <img src="./imagens/fogao.jpg" alt="fogao" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)"/>
+        <br />
+        Fogão Brastemp 6 Bocas Branco
+        <hr />
+        <strike>R$ 3.200,00</strike><br />
+        R$ 2.019,00<br />
+      </div>
+
+      <div class="box_produto" id="microondas">
+        <img src="./imagens/microondas.jpg" alt="microondas" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)"/>
+        <br />
+        Microondas Consul 30 litros
+        <hr />
+        <strike>R$ 580,00</strike><br />
+        R$ 430,00<br />
+      </div>
+
+      <div class="box_produto" id="lavadoraDeRoupas">
+        <img
+          src="./imagens/lavadora-de-roupas.jpg"
+          alt="lavadora-de-roupas"
+          width="120px"
+          onmouseover='destaque(this)' onmouseout="tirarDestaque(this)"/>
+        <br />
+        Lavadora de Roupas LG 12 litros
+        <hr />
+        <strike>R$ 1.650,00</strike><br />
+        R$ 1.300,00<br />
+      </div>
+
+      <div class="box_produto" id="lavaLoucas">
+        <img src="./imagens/lava-loucas.jpg" alt="lava-loucas" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)"/>
+        <br />
+        Lava Louças Brastemp 20 litros
+        <hr />
+        <strike>R$ 6.389,00</strike><br />
+        R$ 5.019,00<br />
+      </div>
+
+      <!-- Mais produtos -->
+      <div class="box_produto" id="geladeira">
+        <img src="./imagens/geladeira.jpg" alt="geladeira" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)"/>
+        <br />
+        Geladeira Frost Free Brastemp Side Inverse 540 litros
+        <hr />
+        <strike>R$ 6.389,00</strike><br />
+        R$ 5.019,00<br />
+      </div>
+
+      <div class="box_produto" id="fogao">
+        <img src="./imagens/fogao.jpg" alt="fogao" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)"/>
+        <br />
+        Fogão Brastemp 6 Bocas Branco
+        <hr />
+        <strike>R$ 3.200,00</strike><br />
+        R$ 2.019,00<br />
+      </div>
+
+      <div class="box_produto" id="microondas">
+        <img src="./imagens/microondas.jpg" alt="microondas" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)"/>
+        <br />
+        Microondas Consul 30 litros
+        <hr />
+        <strike>R$ 580,00</strike><br />
+        R$ 430,00<br />
+      </div>
+
+      <div class="box_produto" id="lavadoraDeRoupas">
+        <img
+          src="./imagens/lavadora-de-roupas.jpg"
+          alt="lavadora-de-roupas"
+          width="120px"
+          onmouseover='destaque(this)' onmouseout="tirarDestaque(this)" />
+        <br />
+        Lavadora de Roupas LG 12 litros
+        <hr />
+        <strike>R$ 1.650,00</strike><br />
+        R$ 1.300,00<br />
+      </div>
+
+      <div class="box_produto" id="lavaLoucas">
+        <img src="./imagens/lava-loucas.jpg" alt="lava-loucas" width="120px" onmouseover='destaque(this)' onmouseout="tirarDestaque(this)" />
+        <br />
+        Lava Louças Brastemp 20 litros
+        <hr />
+        <strike>R$ 6.389,00</strike><br />
+        R$ 5.019,00<br />
+      </div>
+      <!-- Fim da seção de produtos -->
+    </section>
+
+    <footer class="rodape">
+      <h4>Formas de Pagamento</h4>
+      <img src="./imagens/f-pagamento.jpg" alt="formas de pagamento" />
+      <p>&copy 2020 Recode Pro.</p>
+    </footer>
+  </body>
+</html>
